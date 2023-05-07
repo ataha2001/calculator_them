@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- #37517e -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font awseome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/mystyle.css">
+
+    <title>Calulator</title>
+</head>
+
+<body>
+
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-outline-primary m-2" data-bs-toggle="modal" onclick="clearScreen()" data-bs-target="#exampleModal">
+        show Calculator 
+        <span class="btn-label">
+            <i class="fa-solid fa-calculator"></i>
+        </span>
+    </button>
+    
+   <!-- Modal -->
+<div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog " id="modal-dialog">
+        <div class="modal-content " id="dark_modal">
+            <div class="modal-header border-0 pb-0 pt-1 ">
+                <h5 class="modal-title" id="exampleModalLabel">Calculator</h5>
+                <!-- <i class="fa-solid fa-moon"></i> -->
+                <a href="#" onclick="changeMode()" class="ms-1 ps-1 mt-2 "><i class="fa-regular fa-moon fa-beat"></i></a>
+                <!-- Rounded switch -->
+                <!-- <label class="switch">
+                    <input type="checkbox" onclick="getCheckResult()" data-target="#GSCCModal" class="button-checked">
+                    <span class="slider round"></span>
+                </label> -->
+
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close-button"></button>
+            </div>
+            <div class="modal-body " id="modal-body-small">
+                <div class="container shadow mt-0">
+                    <form class="">
+                        <div class="screen">
+                            <input type="text" class="screen mb-2 mt-3" name="screen"  id="screen" disabled>
+                        </div>
+                        <div class="mb-3 mt-0" >
+                            <input type="button" class="btn btn-outline-primary "  value="C" onclick="clearScreen()">
+                            <input type="button" class="btn btn-outline-primary "  value="/" onclick="getNumber(value)">
+                            <input type="button" class="btn btn-outline-primary "  value="x" onclick="getNumber('*')">
+                            <input type="button" class="btn btn-outline-primary " value="<=" onclick="removeLastNumber()">
+                        </div>
+                        <div class="mb-3" >
+                            <input type="button" class="btn btn-outline-primary " value="7" onclick="getNumber(value)">
+                            <input type="button" class="btn btn-outline-primary " value="8" onclick="getNumber(value)">
+                            <input type="button" class="btn btn-outline-primary " value="9" onclick="getNumber(value)">
+                            <input type="button" class="btn btn-outline-primary " value="-" onclick="getNumber(value)">
+                        </div>
+                        <div class="mb-3" >
+                            <input type="button" class="btn btn-outline-primary " value="4" onclick="getNumber(value)">
+                            <input type="button" class="btn btn-outline-primary " value="5" onclick="getNumber(value)">
+                            <input type="button" class="btn btn-outline-primary " value="6" onclick="getNumber(value)">
+                            <input type="button" class="btn btn-outline-primary " value="+" onclick="getNumber(value)">
+                        </div>
+                        <div class="mb-3" >
+                            <input type="button" class="btn btn-outline-primary " value="1" onclick="getNumber(value)">
+                            <input type="button" class="btn btn-outline-primary " value="2" onclick="getNumber(value)">
+                            <input type="button" class="btn btn-outline-primary " value="3" onclick="getNumber(value)">
+                            <input type="button" class="btn btn-outline-primary " value="%" onclick="getPercentage(value)">
+                        </div>
+                        <div class="mb-3" >
+                            <input type="button" class="btn btn-outline-primary " value="0" onclick="getNumber(value)">
+                            <input type="button" class="btn btn-outline-primary " value="." onclick="getNumber(value)">
+                            <input type="button" class="btn btn-outline-primary equal" id="equal" value="="  onclick="getResult()" >
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer ">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <script src="./assets/js/bootstrap.min.js">
+       
+    </script>
+    <script src="./assets/mymainjs.js"></script>
+
+</body>
+
+</html> 
